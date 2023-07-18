@@ -1,4 +1,4 @@
-package it.jobinformatica.infoVoli.repository;
+package it.jobinformatica.repository;
 
 public interface VoloRepository{
 //    @Query(value = "SELECT new it.jobinformatica.infoVoli.model.RecordDati( " +
