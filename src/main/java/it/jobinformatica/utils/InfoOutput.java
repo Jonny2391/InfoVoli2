@@ -1,10 +1,12 @@
 package it.jobinformatica.utils;
 
+import it.jobinformatica.Main;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileOutputStream;
+import java.util.logging.Level;
 
 public class InfoOutput {
     public static void scriviExcel(Object[][] dati, String nomeFile, String nomeFoglio) {
@@ -31,10 +33,10 @@ public class InfoOutput {
 
         try (FileOutputStream outputStream = new FileOutputStream(nomeFile + ".xlsx")) {
             fileExcel.write(outputStream);
-            //TODO log.info("File xls prodotto");
+            Main.logger.info("File xls prodotto");
         } catch (Exception ex) {
-            //TODO log.error("Errore scrittura file");
-            //TODO log.error(ex.getMessage());
+            Main.logger.log(Level.SEVERE, "Errore scrittura file");
+            Main.logger.log(Level.SEVERE, ex.getMessage());
         }
     }
 }

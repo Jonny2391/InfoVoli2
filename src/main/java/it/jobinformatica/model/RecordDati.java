@@ -4,8 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -13,13 +12,13 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class RecordDati {
     private String idVolo;
-    private LocalDateTime giornoSett;
+    private LocalDate giornoSett;
     private String cittaPart;
     private String tipoAereo;
     private long numPasseggeri;
 
     public Object[] ritornaRiga(){
-        return new Object[]{idVolo, giornoSett.toLocalDate().toString(), cittaPart, tipoAereo, numPasseggeri};
+        return new Object[]{idVolo, giornoSett.toString(), cittaPart, tipoAereo, numPasseggeri};
     }
 
     public String[] ritornaIntestazioniColonne() {
