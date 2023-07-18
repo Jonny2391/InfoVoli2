@@ -10,8 +10,8 @@ import java.util.ArrayList;
 @NoArgsConstructor
 public class Esecuzione {
     public void start(String citta) {
-        ArrayList<RecordDati> records = null;
-        Object[][] dati = null;
+        ArrayList<RecordDati> records;
+        Object[][] dati;
 
         //Lettura dati da DB
         //TODO log.info("Inizio lettura db");
